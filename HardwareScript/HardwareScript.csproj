@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="lib\dump.lua" />
+    <None Remove="lib\lazy.lua" />
+    <None Remove="lib\lib.lua" />
+    <None Remove="lib\modeset.lua" />
+    <None Remove="lib\openrgb.lua" />
+    <None Remove="lib\pid.lua" />
+    <None Remove="lib\scheduler.lua" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="lib\dump.lua" />
+    <EmbeddedResource Include="lib\lazy.lua" />
+    <EmbeddedResource Include="lib\lib.lua" />
+    <EmbeddedResource Include="lib\modeset.lua" />
+    <EmbeddedResource Include="lib\openrgb.lua" />
+    <EmbeddedResource Include="lib\pid.lua" />
+    <EmbeddedResource Include="lib\scheduler.lua" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LibreHardwareMonitorLib" Version="0.9.0" />
+    <PackageReference Include="MoonSharp" Version="2.0.0" />
+    <PackageReference Include="OpenRGB.NET" Version="1.7.0" />
+    <PackageReference Include="TaskScheduler" Version="2.10.1" />
+    <PackageReference Include="WebSocketSharp" Version="1.0.3-rc11" />
+  </ItemGroup>
+
+</Project>
